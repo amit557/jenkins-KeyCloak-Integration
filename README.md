@@ -43,7 +43,6 @@ networks:
 volumes:
   jenkins_home:
 
-#-------------------------------------------
 
 On cmd type:  D:<Path>/docker compose up -d
 
