@@ -9,7 +9,6 @@ http://localhost:8080   KeyClock  Version 26.5.3
 
 
 Create docker compose file:
-# CRITICAL for OIDC issuer correctness
 version: "3.9"
 
 services:
@@ -20,6 +19,7 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+
       # CRITICAL for OIDC issuer correctness
       KC_HOSTNAME: keycloak
       KC_HTTP_ENABLED: "true"
@@ -44,6 +44,7 @@ networks:
 
 volumes:
   jenkins_home:
+
 
 
 On cmd type:  D:<Path>/docker compose up -d
