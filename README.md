@@ -29,8 +29,7 @@ services:
       - "8080:8080"
     networks:
       - demo-net
-
-  jenkins:
+   jenkins:
     image: jenkins/jenkins:lts-jdk17
     container_name: jenkins
     ports:
