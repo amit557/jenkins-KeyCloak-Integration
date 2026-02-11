@@ -8,8 +8,8 @@ http://localhost:8081   Jenkins    Version 2.541.1
 http://localhost:8080   KeyClock  Version 26.5.3
 
 
-# Create docker compose file:
-
+Create docker compose file:
+# Use this 
 version: "3.9"
 
 services:
