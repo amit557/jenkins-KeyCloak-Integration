@@ -8,8 +8,8 @@ http://localhost:8081   Jenkins    Version 2.541.1
 http://localhost:8080   KeyClock  Version 26.5.3
 
 
-Create docker compose file:
-----------------------------------------------
+# Create docker compose file:
+
 version: "3.9"
 
 services:
@@ -20,8 +20,6 @@ services:
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
-
-      # CRITICAL for OIDC issuer correctness
       KC_HOSTNAME: keycloak
       KC_HTTP_ENABLED: "true"
       KC_HOSTNAME_STRICT: "false"
@@ -44,7 +42,8 @@ networks:
 
 volumes:
   jenkins_home:
--------------------------------------------
+
+#-------------------------------------------
 
 On cmd type:  D:<Path>/docker compose up -d
 
