@@ -8,43 +8,7 @@ http://localhost:8081   Jenkins    Version 2.541.1
 http://localhost:8080   KeyClock  Version 26.5.3
 
 
-Create docker compose file:
-version: "3.9"
-
-services:
-  keycloak:
-    image: quay.io/keycloak/keycloak:26.5.3
-    container_name: keycloak
-    command: start-dev
-    environment:
-      KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
-
-      # CRITICAL for OIDC issuer correctness
-      KC_HOSTNAME: keycloak
-      KC_HTTP_ENABLED: "true"
-      KC_HOSTNAME_STRICT: "false"
-    ports:
-      - "8080:8080"
-    networks:
-      - demo-net
-
-  jenkins:
-    image: jenkins/jenkins:lts-jdk17
-    container_name: jenkins
-    ports:
-      - "8081:8080"
-    volumes:
-      - jenkins_home:/var/jenkins_home
-    networks:
-      - demo-net
-
-networks:
-  demo-net:
-
-volumes:
-  jenkins_home:
-
+Use attached docker compose file.
 
 
 On cmd type:  D:<Path>/docker compose up -d
