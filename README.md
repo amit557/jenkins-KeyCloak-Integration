@@ -9,7 +9,7 @@ http://localhost:8080   KeyClock  Version 26.5.3
 
 
 Create docker compose file:
-      # CRITICAL for OIDC issuer correctness
+# CRITICAL for OIDC issuer correctness
 version: "3.9"
 
 services:
